@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+    <!--
+    this contains information about Application Name, Components, Required Permissions
+    Application Features, API level, etc...
+    -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hugosalamanca.picnic" >
 
+    <!-- indicates that the app needs to access internet -->
+    <!-- see http://developer.android.com/reference/android/Manifest.permission.html-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <!-- allowBackup determines if the application's data can be backed up and restored.-->
     <application
         android:allowBackup="true"
         android:icon="@drawable/picniclogo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
+            <intent-filter> <!-- Specificies the actions that the activity can handle-->
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
