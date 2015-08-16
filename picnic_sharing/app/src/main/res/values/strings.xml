@@ -7,4 +7,10 @@
     <string name="listedecourse">La liste</string>
     <string name="title_activity_listedecourse2">Listedecourse2</string>
     <string name="button_listedecourse">Liste</string>
+
+    <string-array name = "products"> <!-- This defines the list of products user can choose from -->
+        <item>meat</item>
+        <item>fish</item>
+    </string-array>
+    <string name="product_prompt">Pick a product</string>
 </resources>

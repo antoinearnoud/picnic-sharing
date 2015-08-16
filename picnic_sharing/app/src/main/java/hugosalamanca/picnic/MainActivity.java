@@ -1,5 +1,6 @@
 package hugosalamanca.picnic;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,15 +9,20 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-// Antoine comment test
-
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity { // could use Activity but ActionBarActivity is better for large screens like tablets
+    // Activity class provides visual interface for user interaction
+    // Each Activity must have a single purpose
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { // onCreate: called when the activity is created, just after being launched
+        // Restore any saved state
         super.onCreate(savedInstanceState);
+        // Set content view
         setContentView(R.layout.activity_main);
     }
+
+    // onStart(): called when the activity becomes visible on the screen
+    // onResume(): called after onStart, allow user to interact with the activity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -27,12 +33,10 @@ public class MainActivity extends ActionBarActivity {
 
     public void listedecourse(View view) {
         // Do something in response to button
-        Intent intent = new Intent(this, Listedecourse.class);
-        startActivity(intent);
+        // An Intent Object specifies the Activity that will be started from this activity
+        Intent newIntent = new Intent(this, Listedecourse.class); // this is the context, i.e. interface that accesses global application information
+        startActivity(newIntent);
     }
-
-
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
