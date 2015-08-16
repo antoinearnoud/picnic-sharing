@@ -31,13 +31,6 @@ public class MainActivity extends ActionBarActivity { // could use Activity but 
         return true;
     }
 
-    public void listedecourse(View view) {
-        // Do something in response to button
-        // An Intent Object specifies the Activity that will be started from this activity
-        Intent newIntent = new Intent(this, Listedecourse.class); // this is the context, i.e. interface that accesses global application information
-        startActivity(newIntent);
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -51,5 +44,12 @@ public class MainActivity extends ActionBarActivity { // could use Activity but 
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void listedecourse(View view) {
+        // Do something in response to button
+        // An Intent Object specifies the Activity that will be started from this activity
+        Intent newIntent = new Intent(this, Listedecourse.class); // this is the context, i.e. interface that accesses global application information
+        startActivity(newIntent);
     }
 }
