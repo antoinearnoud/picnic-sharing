@@ -3,10 +3,11 @@
     this contains information about Application Name, Components, Required Permissions
     Application Features, API level, etc...
     -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="hugosalamanca.picnic" >
 
-    <!-- indicates that the app needs to access internet -->
+    <!-- indicates that the app needs to access internet, geo localization and contacts -->
     <!-- see http://developer.android.com/reference/android/Manifest.permission.html-->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>

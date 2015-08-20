@@ -9,14 +9,19 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class MainActivity extends ActionBarActivity { // could use Activity but ActionBarActivity is better for large screens like tablets
+public class MainActivity extends ActionBarActivity {
+    // could use Activity but ActionBarActivity is better for large screens like tablets
     // Activity class provides visual interface for user interaction
     // Each Activity must have a single purpose
+    // The class must have the same name as the file (I think)
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) { // onCreate: called when the activity is created, just after being launched
+    protected void onCreate(Bundle savedInstanceState) {
+        // onCreate: called when the activity is created, just after being launched
+
         // Restore any saved state
         super.onCreate(savedInstanceState);
+
         // Set content view
         setContentView(R.layout.activity_main);
     }
@@ -26,8 +31,11 @@ public class MainActivity extends ActionBarActivity { // could use Activity but 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        // public means it can be called from other classes
         // Inflate the menu; this adds items to the action bar if it is present.
+        // Inflates the menu means it takes the menu defined in xml file and put it under the : button
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        // R. means resources
         return true;
     }
 
