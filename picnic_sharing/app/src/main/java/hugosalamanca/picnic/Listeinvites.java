@@ -5,25 +5,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.app.ListActivity;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 
 
-public class Listedecourse extends ActionBarActivity {
 
+public class Listeinvites extends ActionBarActivity {
 
-    AutoCompleteTextView autoCompleteTextView;
-    String[] Product_Names;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listedecourse);
-
-        // this launch the text fill
-        autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.product);
-        Product_Names = getResources().getStringArray(R.array.product_names);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,Product_Names);
-        autoCompleteTextView.setAdapter(adapter);
+        setContentView(R.layout.activity_listeinvites);
     }
 
     @Override

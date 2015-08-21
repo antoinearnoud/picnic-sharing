@@ -1,5 +1,7 @@
 package hugosalamanca.picnic;
 
+import android.app.ActionBar;
+import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -24,13 +26,15 @@ public class MainActivity extends ActionBarActivity {
 
         // Set content view
         setContentView(R.layout.activity_main);
+
     }
 
     // onStart(): called when the activity becomes visible on the screen
     // onResume(): called after onStart, allow user to interact with the activity
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+
+    //@Override
+   public boolean onCreateOptionsMenu(Menu menu) {
         // public means it can be called from other classes
         // Inflate the menu; this adds items to the action bar if it is present.
         // Inflates the menu means it takes the menu defined in xml file and put it under the : button
@@ -58,6 +62,12 @@ public class MainActivity extends ActionBarActivity {
         // Do something in response to button
         // An Intent Object specifies the Activity that will be started from this activity
         Intent newIntent = new Intent(this, Listedecourse.class); // this is the context, i.e. interface that accesses global application information
+        startActivity(newIntent);
+    }
+
+    public void listeinvites(View view) {
+        // Do something in response to button
+        Intent newIntent = new Intent(this, Listeinvites.class);
         startActivity(newIntent);
     }
 }
