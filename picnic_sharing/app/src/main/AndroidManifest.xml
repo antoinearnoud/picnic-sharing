@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <!--
-    this contains information about Application Name, Components, Required Permissions
-    Application Features, API level, etc...
-    -->
+    <!-- this contains information about Application Name, Components, Required Permissions
+    Application Features, API level, etc... -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="hugosalamanca.picnic" >
@@ -23,14 +21,21 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
-            <intent-filter> <!-- Specificies the actions that the activity can handle-->
+            <intent-filter> <!-- Specificies the actions that the activity can/should handle-->
                 <action android:name="android.intent.action.MAIN" />
+                <!-- this activity is the one launched at first: -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Listedecourse"
             android:label="@string/title_activity_listedecourse" >
+        </activity>
+
+        <activity
+            android:name=".Listeinvites"
+            android:label="@string/title_activity_listeinvites" >
         </activity>
     </application>
 
