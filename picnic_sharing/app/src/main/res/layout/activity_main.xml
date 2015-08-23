@@ -1,4 +1,4 @@
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -18,6 +18,20 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView"
         android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liste invites"
+        android:id="@+id/button_listeinvites"
+        android:onClick="listeinvites"
+        android:layout_above="@+id/button_listedecourse"
+        android:layout_centerHorizontal="true"
+        android:background="#06327a"
+        android:textColor="#cbd9f0"
+        android:padding="15dp"
+        android:layout_marginBottom="46dp"
         />
 
     <Button
@@ -28,14 +42,11 @@
         android:onClick="listedecourse"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+        android:background="#06327a"
+        android:textColor="#cbd9f0"
+        android:padding="15dp"
         />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Liste invites"
-        android:id="@+id/button_listeinvites"
-        android:onClick="listeinvites"
-        />
 
-</LinearLayout>
+
+</RelativeLayout>
