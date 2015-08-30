@@ -12,8 +12,21 @@
 
     <ExpandableListView
         android:id="@+id/list_Boissons"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
     </ExpandableListView>
 
+    <Button
+        android:layout_below="@+id/list_Boissons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO!"
+        android:id="@+id/button_listecourse"
+        android:onClick="listecourse"
+        android:layout_centerHorizontal="true"
+        android:background="#06327a"
+        android:textColor="#cbd9f0"
+        android:padding="20dp"
+
+        />
 </RelativeLayout>
