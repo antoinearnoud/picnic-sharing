@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -153,4 +154,7 @@ public class Listedecourse extends Activity {
         listDataChild.put(listDataHeader.get(5), Divers);
     }
 
+    public void listecourse(View view) {
+        Toast.makeText(getApplicationContext(), "La liste du picnic contient : La liste en fonction des clics", Toast.LENGTH_SHORT).show();
+    }
 }
